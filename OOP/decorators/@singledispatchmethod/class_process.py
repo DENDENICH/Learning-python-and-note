@@ -7,10 +7,8 @@ class Processor:
     def process(data):
         raise TypeError('Аргумент переданного типа не поддерживается')
     
+
     @process.register(int)
-    def process_int(data) -> int:
-        return data * 2
-    
     @process.register(float)
     def process_float(data) -> float:
         return data * 2
