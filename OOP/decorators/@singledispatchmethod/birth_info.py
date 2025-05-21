@@ -26,6 +26,7 @@ class BirthInfo:
             raise ValueError("Массив должен содержать ровно три числа")
         self.birth_date = date(*birth_date)
 
+    # метод age() для расчета возраста человека в годах.
 
 
 b = BirthInfo("2020-09-18")
