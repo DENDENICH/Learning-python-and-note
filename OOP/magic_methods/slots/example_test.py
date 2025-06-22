@@ -1,6 +1,10 @@
 from functools import singledispatchmethod
 
 
+# слоты - альтернатива __dict__, увеличивает производительность работы с объектами класса с ограниченным набором атрибутов.
+# Т.е. используя слоты, нельзя создать динамически новые свойства
+
+
 class User:
     __slots__ = ["name", "age"]
     @singledispatchmethod
