@@ -16,12 +16,5 @@ class Child(Parent):
         self.age = age
 
 
-@dataclass
-class ParentData:
-    _model: int = field(default=1)
-
-
-
-
 c = Child.from_dict({"name": "John", "age": 20})
 print(c.__dict__) # {'name': 'John', 'age': 20}
