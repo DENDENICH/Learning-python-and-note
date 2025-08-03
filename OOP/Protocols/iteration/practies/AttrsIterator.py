@@ -1,3 +1,5 @@
+import time
+
 
 class Obj:
     def __init__(self, a, b, c=None):
@@ -28,3 +30,15 @@ att = AttrsIterator(Obj(1, 2))
 
 for i in att:
     print(i)
+
+print(*att)
+
+
+### FOR test in speed ###
+start = time.time()
+for i in range(3_000_000):
+    atts = AttrsIterator(Obj(1, 2))
+    for i in atts:
+        pass
+end = time.time()
+print(f"Время выполнения: {end - start}") # на 3 миллиона операций = ~ 5.282001256942749 секунды
