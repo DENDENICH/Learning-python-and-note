@@ -12,11 +12,11 @@ class Solution:
         )
 
     def _get_arrow_location_hour(self, hour: int, minutes: int) -> float:
-        delta_by_minut = (minutes / 12) * self.minimum_length
+        delta_by_minute = (minutes / 12) * self.minimum_length
         if 1 <= hour < 12:
-            arrow_location = hour * self.lenth_of_one_hour + delta_by_minut # расположение часовой стрелки в градусах
+            arrow_location = hour * self.lenth_of_one_hour + delta_by_minute # расположение часовой стрелки в градусах
         elif hour == 12:
-            arrow_location = delta_by_minut
+            arrow_location = delta_by_minute
         else:
             raise ValueError("value 'hour' is invalid - must be range 1 to 12")
         return arrow_location
